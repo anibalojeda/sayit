@@ -2,7 +2,7 @@
 
 A simple text-to-speech web app for listening to your words. Paste in some text, choose a voice, and press play.
 
-![Uploading image.png…]()
+<img width="1018" height="892" alt="image" src="https://github.com/user-attachments/assets/60c7f2cd-e55c-42c0-ad5a-4a785f6b571a" />
 
 
 ## Why I made this
