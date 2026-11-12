@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-version" content="1.1.2">
+    <meta name="theme-color" content="#f7f6f2">
+    <title>Say it — Text to speech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.1.2">
+    <script src="app.js?v=1.1.2" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Say it home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        say it<span class="brand-period">.</span>
+      </a>
+      <div class="top-note"><span class="status-dot"></span> A LITTLE SPACE TO LISTEN</div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="eyebrow"><span class="sparkle">✳</span> WORDS, MEET SOUND</div>
+        <h1>Give your words<br><em>a voice.</em></h1>
+        <p>Turn text into something you can listen to.<br class="desktop-break"> Press play, sit back, and let the words do their thing.</p>
+      </section>
+
+      <section class="studio" aria-label="Text to speech studio">
+        <div class="studio-main">
+          <div class="section-heading">
+            <div>
+              <span class="step">01 / YOUR TEXT</span>
+              <h2>What should we read?</h2>
+            </div>
+            <button type="button" class="text-button" id="clear-button">Clear text <span aria-hidden="true">↗</span></button>
+          </div>
+          <label class="sr-only" for="text-input">Text to read aloud</label>
+          <textarea id="text-input" maxlength="10000" placeholder="Type or paste your text here..."></textarea>
+          <div class="editor-footer">
+            <span id="char-count">0 / 10,000 characters</span>
+            <button type="button" class="sample-button" id="sample-button"><span aria-hidden="true">✦</span> Try an example</button>
+          </div>
+        </div>
+
+        <aside class="settings">
+          <span class="step">02 / MAKE IT YOURS</span>
+          <h2>Set the tone.</h2>
+          <p class="settings-intro">A few little tweaks can make all the difference.</p>
+
+          <div class="setting voice-setting">
+            <label for="voice-select">Voice</label>
+            <span class="setting-hint">Choose your narrator</span>
+            <div class="select-wrap">
+              <select id="voice-select"><option value="polly:Matthew">Matthew — neural (English, US)</option></select>
+            </div>
+            <span class="setting-hint" id="voice-hint">Neural voices send your text to Amazon Polly.</span>
+          </div>
+
+          <div class="setting">
+            <div class="setting-row"><label for="rate">Speed</label><output id="rate-value" for="rate">1.0×</output></div>
+            <span class="setting-hint">Find your perfect pace</span>
+            <input id="rate" type="range" min="0.5" max="2" step="0.1" value="1">
+            <div class="range-labels"><span>Slower</span><span>Faster</span></div>
+          </div>
+
+          <div class="setting">
+            <div class="setting-row"><label for="pitch">Pitch</label><output id="pitch-value" for="pitch">1.0</output></div>
+            <span class="setting-hint" id="pitch-hint">Pitch is available for device voices.</span>
+            <input id="pitch" type="range" min="0.5" max="2" step="0.1" value="1">
+            <div class="range-labels"><span>Lower</span><span>Higher</span></div>
+          </div>
+        </aside>
+
+        <div class="player">
+          <div class="player-info">
+            <div class="player-icon" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <div><strong id="player-title">Ready when you are</strong><span id="player-status" role="status" aria-live="polite">Your words are waiting to be heard.</span></div>
+          </div>
+          <div class="player-actions">
+            <button type="button" id="stop-button" class="stop-button" disabled>Stop</button>
+            <button type="button" id="play-button" class="play-button"><span id="play-icon" aria-hidden="true">▶</span><span id="play-label">Listen now</span></button>
+          </div>
+        </div>
+      </section>
+      <div class="below-studio"><span>✳ &nbsp; MADE FOR LISTENING</span><span>YOUR WORDS. YOUR PACE.</span></div>
+      <div class="footnote"><span class="footnote-icon">i</span> Neural voices send text to Amazon Polly. Device voices vary by browser.</div>
+    </main>
+    <footer><span>Made by Anibal Ojeda. · v1.1.2</span><span>TAKE A BREATH. PRESS PLAY. <span class="footer-star">✳</span></span></footer>
+  </body>
+</html>
