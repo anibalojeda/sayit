@@ -2,6 +2,9 @@
 
 A simple text-to-speech web app for listening to your words. Paste in some text, choose a voice, and press play.
 
+![Uploading image.png…]()
+
+
 ## Why I made this
 
 I wanted a way to turn text into speech so I could listen to things in the car. But many services aren't free, require you to create an account and share personal information, or make you buy credits. I just wanted a simple site where I could paste text and listen, so I made one with the help of AI.
